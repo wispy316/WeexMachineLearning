@@ -37,8 +37,8 @@ public class MainActivity extends AppCompatActivity implements IWXRenderListener
         mContainer = (ViewGroup) findViewById(R.id.container);
 
         mInstance = new WXSDKInstance(this);
-        loadWXfromService("http://dotwe.org/raw/dist/64b69d0e25996ea2c83764c7ddd9ec94.bundle.wx");
-
+        // demo at http://dotwe.org/vue/59f092dbdd85934b4747be8b32d15299
+        loadWXfromService("http://dotwe.org/raw/dist/59f092dbdd85934b4747be8b32d15299.bundle.wx");
 
     }
 

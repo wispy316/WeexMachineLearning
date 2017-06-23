@@ -26,23 +26,24 @@ dependencies {
     compile "com.android.support:appcompat-v7:24.1.1"
     compile "com.android.support:recyclerview-v7:24.1.1"
     compile "com.alibaba:fastjson:1.1.54.android"
-
-    testCompile "com.alibaba:fastjson:1.1.54.android"
-
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
-    compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
 
     compile 'com.taobao.android:weex_sdk:0.13.2.5@aar'
 
     compile 'com.loopj.android:android-async-http:1.4.9@aar'
-    provided('com.taobao.android:ski:2.0.1@jar')
+    compile 'com.taobao.android:ski:2.0.1@jar'
     compile 'com.squareup.picasso:picasso:2.5.2'
     compile 'com.squareup.okhttp:okhttp:2.3.0'
     compile 'com.squareup.okhttp:okhttp-ws:2.3.0'
     compile 'com.squareup.okio:okio:1.0.1'
 
+    compile 'com.flurgle:camerakit:0.9.13'
+
     testCompile 'junit:junit:4.12'
+    testCompile "com.alibaba:fastjson:1.1.54.android"
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+
 }
