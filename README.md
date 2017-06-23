@@ -21,7 +21,9 @@ imageRecognition.predictWithImage(this.$refs.image.ref, (results)=>{
 })
 ```
 
-[Screenshot1](./doc/Screenshot1.png)
+[Screenshot1](https://github.com/wispy316/WeexMachineLearning/blob/master/doc/Screenshot1.png?raw=true)
 
-[Screenshot2](./doc/Screenshot2.png)
+[Screenshot2](https://github.com/wispy316/WeexMachineLearning/blob/master/doc/Screenshot2.png?raw=true)
+
+Look, it is a little more precise than me. I thought screenshot2  was a leopard.
 
