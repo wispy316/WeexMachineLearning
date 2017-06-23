@@ -9,6 +9,7 @@ Weex modules for machine learning based on [TensorFlow](https://www.tensorflow.o
 # Demo
 1. Git clone this repo and import into Android Studio, then click run
 2. Download this [APK](doc/app-debug.apk) and install
+3. The demo VUE js-bundle is [here](http://dotwe.org/vue/4259b37aff50cdf6c890c6904f41940a)
 
 # Modules
 
@@ -21,9 +22,9 @@ imageRecognition.predictWithImage(this.$refs.image.ref, (results)=>{
 })
 ```
 
-[Screenshot1](https://github.com/wispy316/WeexMachineLearning/blob/master/doc/Screenshot1.png?raw=true)
+![Screenshot1](https://github.com/wispy316/WeexMachineLearning/blob/master/doc/Screenshot1.png?raw=true)
 
-[Screenshot2](https://github.com/wispy316/WeexMachineLearning/blob/master/doc/Screenshot2.png?raw=true)
+![Screenshot2](https://github.com/wispy316/WeexMachineLearning/blob/master/doc/Screenshot2.png?raw=true)
 
 Look, it is a little more precise than me. I thought screenshot2  was a leopard.
 
