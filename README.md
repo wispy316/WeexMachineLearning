@@ -1,12 +1,25 @@
 # WeexMachineLearning
 
-主要通过[TensorFlow](https://www.tensorflow.org/)完成，weex只是做了层module的包装工作。
+Weex modules for machine learning based on [TensorFlow](https://www.tensorflow.org/)  in Android. Thanks for  [AndroidTensorFlowMachineLearningExample](https://github.com/MindorksOpenSource/AndroidTensorFlowMachineLearningExample) .
 
-图省事就直接下载apk看效果，[点我](doc/app-debug.apk)
+# Requirements
+* Android Studio
+* Android 14+
 
-源码部分参考了 [AndroidTensorFlowMachineLearningExample](https://github.com/MindorksOpenSource/AndroidTensorFlowMachineLearningExample)
+# Demo
+1. Git clone this repo and import into Android Studio, then click run
+2. Download this [APK](doc/app-debug.apk) and install
 
-截图预览：
+# Modules
+
+## imageRecognition
+
+```javascript
+let imageRecognition = weex.requireModule('imageRecognition')
+imageRecognition.predictWithImage(this.$refs.image.ref, (results)=>{
+  this.results = results;  // contains key result, data
+})
+```
 
 [Screenshot1](./doc/Screenshot1.png)
 
