@@ -1,10 +1,18 @@
 package com.example.xj.weexandroidimagerecognition;
 
+import android.content.Intent;
+import android.content.res.TypedArray;
+import android.graphics.Point;
+import android.os.Build;
 import android.os.Handler;
 import android.os.Message;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
@@ -21,6 +29,8 @@ import com.taobao.weex.ui.component.NestedContainer;
 import com.taobao.weex.utils.WXFileUtils;
 
 import java.io.UnsupportedEncodingException;
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity implements IWXRenderListener, WXSDKInstance.NestedInstanceInterceptor  {
@@ -37,9 +47,26 @@ public class MainActivity extends AppCompatActivity implements IWXRenderListener
         mContainer = (ViewGroup) findViewById(R.id.container);
 
         mInstance = new WXSDKInstance(this);
-        // demo at http://dotwe.org/vue/59f092dbdd85934b4747be8b32d15299
-        loadWXfromService("http://dotwe.org/raw/dist/59f092dbdd85934b4747be8b32d15299.bundle.wx");
+        // demo at http://dotwe.org/vue/4259b37aff50cdf6c890c6904f41940a
+        loadWXfromService("http://dotwe.org/raw/dist/4259b37aff50cdf6c890c6904f41940a.bundle.wx");
 
+
+
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if(item.getItemId() == R.id.menu_camera) {
+            Intent intent = new Intent(this, CameraPreviewActivity.class);
+            startActivity(intent);
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     private void loadWXfromService(final String url) {
@@ -114,4 +141,6 @@ public class MainActivity extends AppCompatActivity implements IWXRenderListener
     public void onCreateNestInstance(WXSDKInstance wxsdkInstance, NestedContainer nestedContainer) {
 
     }
+
+
 }
